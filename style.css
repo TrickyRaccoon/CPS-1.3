@@ -1,9 +1,9 @@
 body{
     margin:0;
+    background-color: #F8F8F8;
 }
 
 .wrapper{
-    background-color: #FFFFFF;
     max-width: 1120px;
     padding: 0;
     margin: 0;
@@ -11,6 +11,7 @@ body{
 }
 /* СТИЛИ ДЛЯ ХЕДЕРА*/
 .header{
+    background-color: #FFFFFF;
     margin: auto;
     width: 100%;
     min-height: 88px;
@@ -28,7 +29,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.header__menu-button{
+.menu-button{
     background: url("./img/menu-button.svg") no-repeat center;
     background-color: #FF3E79;
     width: 40px;
@@ -45,7 +46,7 @@ body{
     height: 32px;
     background-color: #EAEAEA;
 }
-.header__repair-button{
+.repair-button{
     background: url("./img/repair-button.svg") no-repeat center;
     background-color: #FF3E79;
     width: 40px;
@@ -53,7 +54,7 @@ body{
     border-radius: 50%;
     border: none;
 }
-.header__search-button{
+.search-button{
     background: url("./img/search-button.svg") no-repeat center;
     background-color: #FF3E79;
     width: 40px;
@@ -114,16 +115,15 @@ body{
     margin: 0;
 }
 .page__menu-list{
-    width: 100%;
+    padding: 0;
     margin-top: 24px;
     overflow: hidden;
     overflow-x: scroll;
     white-space:nowrap;
 }
-.fade{
-    position: absolute;
-    z-index: 1;
-    right: 0;
+.page__menu-list ul{
+    padding: 0;
+    margin: 0;
 }
 .page__menu-item{
     color: #7E7E82;
@@ -136,7 +136,20 @@ body{
     line-height: 24px;
     vertical-align: middle;
 }
+.page__menu-item a{
+    text-decoration: none;
+}
+.page__menu-list li:last-of-type::after{
+    content: " ";
+    width: 24px;
+    height:40px;
+    background-image: url("./img/fade.svg");
+    position: absolute;
+    z-index: 1;
+    right: 0;
+}
 .page__menu-item:first-of-type{
+    background-color: #FFFFFF;;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
@@ -197,7 +210,7 @@ body{
     .page__title-text{
         margin-left: 12px;
     }
-    .page__menu-item:first-of-type{
+    .page__menu-list{
         margin-left: 16px;
     }
     .page__info{
@@ -242,7 +255,7 @@ body{
     .page__title-text{
         margin-left: 20px;
     }
-    .page__menu-item:first-of-type{
+    .page__menu-list{
         margin-left: 24px;
     }
     .page__main-picture{
@@ -283,6 +296,9 @@ body{
   }
 /*1120*/
 @media screen and (min-width: 900px){
+    .page__title-text{
+        margin-left: 30px;
+    }
     .header{
         display: none;
     }
@@ -321,6 +337,7 @@ body{
     .page__menu-list{
         max-width: 1100px;
         white-space: normal;
+        margin-left: 34px;
     } 
     .page__menu-item:last-of-type{
        padding-left:42px;
@@ -333,9 +350,9 @@ body{
         width: 378px;
         display: flex;
         justify-content: space-between;
-        margin-right: 32px;
         margin-top: 20px;
         font-weight: 600;
+        margin-right: 32px;
     }
     .page__pseudo-link{
         display: flex;
@@ -345,6 +362,13 @@ body{
     }
     .page__title{
         margin-top: 42px;
+    }
+    .page__menu-item{
+        padding-left: 22px;
+        padding-right: 21px;
+    }
+    .page__menu-list li:last-of-type::after{
+        display: none;
     }
 }
 
