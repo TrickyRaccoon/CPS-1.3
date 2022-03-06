@@ -20,13 +20,9 @@
     margin-left: 24px;
     margin-right: 24px;
 }
-.close-button{
+
+.button-close{
     background: url("./img/close-button.svg") no-repeat center;
-    background-color: #FF3E79;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
 }
 
 .header__logo{
@@ -35,13 +31,13 @@
     margin-left: 16px;
 }
 
-.search-button{
+.header__logo:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.button-search{
     background: url("./img/search-side-menu.svg") no-repeat center;
-    background-color: #FF3E79;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
     justify-self: flex-end;
     margin-left: auto;
 }
@@ -71,6 +67,11 @@ color: #1B1C21;
     font-weight: 600;
 }
 
+.menu-list__item a:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+
 .menu-list__item{
     margin-bottom: 32px;
     height: 32px;
@@ -93,24 +94,16 @@ color: #1B1C21;
     justify-content: space-between;
     margin-left: 24px;
 }
-.connection-buttons__call-button{
+.button-call{
     background: url("./img/phone.svg") no-repeat center;
-    background-color: #FF3E79;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
 }
-.connection-buttons__chat-button{
+.button-chat{
     background: url("./img/chat.svg") no-repeat center;
-    background-color: #FF3E79;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
 }
-.connection-buttons__profile-button{
+.button-profile{
     background: url("./img/man.svg") no-repeat center;
+}
+.button{
     background-color: #FF3E79;
     width: 40px;
     height: 40px;
@@ -119,6 +112,8 @@ color: #1B1C21;
 }
 
 .footer__email{
+    text-decoration: none;
+    display: block;
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
@@ -129,8 +124,13 @@ color: #1B1C21;
     margin-left: 24px;
     font-weight: 600;
 }
+.footer__email:hover{
+    opacity:0.5;
+}
 
 .footer__mobile-number{
+    text-decoration:none;
+    display: block;
     font-family: TT Lakes;
     font-size: 24px;
     line-height: 32px;
@@ -140,6 +140,9 @@ color: #1B1C21;
     margin: 0;
     margin-left: 24px;
     margin-top:12px;
+}
+.footer__mobile-number:hover{
+    opacity: 0.5;
 }
 
 .footer__language-list{
@@ -151,7 +154,7 @@ color: #1B1C21;
     margin-bottom: 32px;
 }
 
-.footer__language-list--item{
+.footer__language-name{
     display: inline-block;
     font-family: TT Lakes;
     font-size: 16px;
@@ -161,23 +164,22 @@ color: #1B1C21;
     font-weight: 600;
 }
 
-.footer__language-list--item:not(.footer__language-list--item:last-of-type){
+.footer__language-name:not(.footer__language-name:last-of-type){
     margin-right: 7px;
 }
 
-.footer__language-list--item button{
+.footer__language-name button{
     border: none;
     background-color: transparent;
     padding: 0;
 }
 
-.footer__language-list--item_active button{
+.footer__language-name_active button{
     color: #7E7E82;
 }
 
 button:hover{
-    filter: drop-shadow(16px 16px 20px #FF3E79);
-    transition: filter 0.2s ease-in-out;
+    opacity: 0.5;
 }
 
 
