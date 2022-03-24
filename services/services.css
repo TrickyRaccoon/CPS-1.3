@@ -14,6 +14,7 @@ body{
     max-width: 1120px;
     margin-left: 0;
     background-color: #F8F8F8;
+    margin: auto;
 }
 
 .header__title{
@@ -27,24 +28,7 @@ body{
     margin-left: 32px;
     font-weight: normal;
 }
-
-.services{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 32px;
-    row-gap: 16px;
-    width: 1056px;
-    margin: auto;
-    margin-top: 24px;
-    overflow: hidden;
-    max-height: 165px;
-}
-
-.swiper{
-    display:none;
-}
-
-.services__item{
+.swiper-slide__item{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,6 +37,7 @@ body{
     border: 1px solid #EAEAEA;
     border-radius: 6px;
     background: #FFFFFF;
+    z-index: 10000;
 }
 
 .services__item_logo{
@@ -96,8 +81,8 @@ body{
     transform: rotate(180deg);
 }
 
-.services_active{
-    max-height: none;
+.swiper .services_active{
+    max-height: none !important;
 }
 
 .expand-button_active{
@@ -107,60 +92,9 @@ body{
 .readmore-button_active{
     margin-top: 46px;
 }
-.swiper .swiper-pagination-bullet{
-    background: #DDDDDD;
-    opacity: 1;
-    width: 12px;
-    height: 12px;
-}
-.swiper .swiper-pagination-bullet-active{
-    background: #B5B6BC;
-}
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-    bottom: 0;
-    margin-top: 24px;
-    position: relative;
-}
 
-.swiper::before{
-    content: '';
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-    width: 24px;
-    height: 74px;
-    position: absolute;
-    right: 0;
-    z-index: 2;
-}
-
-.wrapper .swiper{
-    display: none;
-    margin-top: 16px;
-    margin-left: 16px;
-}
-
-@media screen and (max-width: 800px) {
-    .header__title{
-        margin-left: 24px;
-    }
-
-    .services{
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 24px;
-        row-gap: 16px;
-        width: 720px;
-    }
-
-    .services__item{
-        width: 224px;
-    }
-
-    .readmore-button{
-        margin-left: 24px;
-    }
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 0px) and (max-width: 767px){
     .header{
         height: 80px;
     }
@@ -169,11 +103,7 @@ body{
         margin-left: 16px;
     }
 
-    .services{
-        display: none;
-    }
-
-    .services__item{
+    .swiper-slide__item{
         display: flex;
         width: 240px;
     }
@@ -182,8 +112,78 @@ body{
         display: none;
     }
 
+    .swiper .swiper-pagination-bullet{
+        background: #DDDDDD;
+        opacity: 1;
+        width: 12px;
+        height: 12px;
+    }
+    .swiper .swiper-pagination-bullet-active{
+        background: #B5B6BC;
+    }
+    
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+        bottom: 0;
+        margin-top: 24px;
+        position: relative;
+    }
+    
+    .swiper::before{
+        content: '';
+        background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+        width: 24px;
+        height: 74px;
+        position: absolute;
+        right: 0;
+        z-index: 2;
+    }
+
+    .swiper .swiper-wrapper{
+        display: flex;
+    }
+
     .wrapper .swiper{
-        display: block;
+        margin-top: 16px;
+        margin-left: 16px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1119px){
+    .header__title{
+        margin-left: 24px;
+    }
+
+    .swiper .swiper-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 24px;
+        row-gap: 16px;
+        width: 720px;
+        margin: auto;
+        margin-top: 24px;
+        max-height: 165px;
+    }
+
+    .swiper-slide__item{
+        width: 224px;
+    }
+
+    .readmore-button{
+        margin-left: 24px;
+    }
+}
+
+@media screen and (min-width: 1120px){
+    .swiper .swiper-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 32px;
+        row-gap: 16px;
+        width: 1056px;
+        margin: auto;
+        margin-top: 24px;
+        max-height: 165px;
     }
 }
 

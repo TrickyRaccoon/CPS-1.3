@@ -1,4 +1,4 @@
-var services = document.querySelector('.services');
+var services = document.querySelector('.swiper-wrapper');
 var readMoreButton = document.querySelector('.readmore-button');
 var readMoreButtonDescription = document.querySelector('.readmore-button__description');
 var expandButton = document.querySelector('.expand-button');
