@@ -1,0 +1,70 @@
+@import 'swiper/swiper.scss';
+@import 'swiper/modules/pagination/pagination.scss';
+.swiper{
+    &-wrapper--active{
+        max-height: none !important;
+    }
+    &-wrapper{
+        overflow: hidden;
+    }
+    &-pagination{
+        position: initial;
+        margin-top: 16px;
+        
+    }
+    &-pagination-bullet{
+        background: #DDDDDD;
+        opacity: 1;
+        width: 12px;
+        height: 12px;
+        &-active{
+            background: $formTextColor;
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .wrapper .swiper{
+        margin-top: 16px;
+        margin-left: 16px;
+            .swiper-wrapper{
+                display: flex;
+                overflow: visible;
+            }
+        &::before{
+            content: '';
+            background: linear-gradient(270deg, $bgHeaderColor 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+            width: 24px;
+            height: 74px;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1439px){
+    .swiper .swiper-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 24px;
+        row-gap: 16px;
+        width: 720px;
+        margin: auto;
+        margin-top: 24px;
+        max-height: 165px;
+    }
+}
+
+@media screen and (min-width: 1439px){
+    .swiper .swiper-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 32px;
+        row-gap: 16px;
+        width: 1056px;
+        margin: auto;
+        margin-top: 24px;
+        max-height: 165px;
+    }
+}

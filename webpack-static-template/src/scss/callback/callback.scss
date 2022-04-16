@@ -1,0 +1,113 @@
+.callback-page{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom:0;
+    transition: 0.5s;
+    transform: translateX(100%);
+    z-index: 1000;
+    &_active{
+        transform: translateX(0%);
+        position: fixed;
+    }
+    .callback-modal{
+        display: flex;
+        flex-direction: column;
+        background: $backGroundWhite;
+        width: 440px;
+        position: absolute;
+        top:0;
+        right: 0;
+        height: 100%;
+            .button--close{
+                position: absolute;
+                left: -73px;
+                top: 32px;
+            }
+            .form__input{
+                border: 1px solid $borderColor;
+                border-radius: 8px;
+                height: 48px;
+                width: 376px;
+                margin-bottom: 16px;
+                font-family: 'TT Lakes';
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: #B5B6BC;
+            }
+            .form__agreement{
+                font-family: 'TT Lakes';
+                font-size: 14px;
+                line-height: 16px;
+                color: #7E7E82;
+                width: 376px;
+                 a{
+                     color: $buttonColor;
+                     text-decoration: none;
+                 }
+            }
+        &__title{
+            display: flex;
+            width: 288px;
+            margin-top: 32px;
+            margin-bottom: 24px;
+            height: 40px;
+            font-weight: bold;
+        }
+        &__title-text{
+            font-family: 'TT Lakes';
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+            margin-left: 30px;
+        }
+        &__form{
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+                .button--long{
+                    margin-left: auto;
+                    margin-right: 32px;
+                    margin-top: 24px;
+                }
+        }
+        &__message{
+            height: 118px !important;
+        }
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .callback-page{
+            .callback-modal{
+                max-width: 440px;
+                width: 100%;
+                .button--close{
+                    position: absolute;
+                    left: 16px;
+                    top: 24px;
+                }
+                .form__input{
+                    width: 288px;
+                }
+                .form__agreement{
+                    width: 288px;
+                }
+                &__form{
+                    margin-left: 16px;
+                    .button--long{
+                        margin-right: 16px;
+                    }
+                }
+                &__title{
+                    margin-top: 104px;
+                }
+                &__title-text{
+                    margin-left: 16px;
+                }
+            }
+    }
+}

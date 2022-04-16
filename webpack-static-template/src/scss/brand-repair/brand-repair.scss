@@ -1,0 +1,61 @@
+.brand-repair{
+    padding: 0;
+    margin: 0;
+    margin-top: 35px;
+    .button--more{
+        margin-right: 16px;
+    }
+    &__item-logo{
+        margin-left: 16px;
+        background-repeat: no-repeat;
+    }
+    &__card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 72px;
+        width: 238px;
+        border: 1px solid #EAEAEA;
+        border-radius: 6px;
+        background: #FFFFFF;
+        z-index: 10000;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .brand-repair{
+        &__header{
+            height: 80px;
+        }
+        &__title{
+            width: 288px;
+            margin-left: 16px;
+        }
+        &__readmore-button{
+            display: none;
+        }
+        &__card{
+            display: flex;
+            width: 240px;
+        }
+        .swiper-slide{
+            width: 240px;
+        }
+           
+    }
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1439px){
+    .brand-repair{
+        &__title{
+            margin-left: 24px;
+        }
+        &__card{
+            width: 224px;
+        }
+    }
+}
+
+@media screen and (min-width: 1439px){
+    
+}

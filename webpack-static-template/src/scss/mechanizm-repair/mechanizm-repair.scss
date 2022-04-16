@@ -1,0 +1,57 @@
+.mechanizm-repair{
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    &__card{
+        background: $backGroundWhite;
+        border: 1px solid $borderColor;
+        border-radius: 6px;
+        width: 240px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__name{
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        font-weight: 600;
+        margin-top: 16px;
+        margin-left: 16px;
+    }
+        .button--more{
+            align-self: flex-end;
+            margin-bottom: 16px;
+            margin-right: 16px;
+        }
+     .swiper{
+        &::before{
+            height: 166px !important;
+        }
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .mechanizm-repair__readmore-button{
+        display: none;
+    }
+    .mechanizm-repair{
+            .swiper-slide{
+                width: 240px;
+            }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1439px){
+    .mechanizm-repair__card{
+        width: 224px;
+    }
+}
+
+@media screen and (min-width: 1439px){
+    
+}

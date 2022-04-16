@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+    background-color: $bgHeaderColor;
+    overflow-x: hidden;
+    a{
+      &:hover{
+          opacity: 0.5;
+          cursor: pointer;
+      }
+    }
+    button{
+      &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+  .wrapper{
+    display: block;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  .main{
+    max-width: 1120px;
+    margin: auto;
+    transition: 0.5s;
+    &_disabled{
+      opacity: 0.5;
+    }
+  }
+  @media screen and (min-width: 1439px) {
+      .main{
+        margin-left: 320px;
+      }
+      .wrapper{
+        height: 2057px;
+      }
+  }
+  @media screen and (min-width:0px) and (max-width: 767px){
+    .main{
+      &_disabled{
+        max-height: 760px;
+      }
+    }
+  }

@@ -1,0 +1,225 @@
+.prices{
+    margin-top: 50px;
+        .swiper-wrapper{
+            display: flex;
+            flex-direction: column;
+            max-height: 324px;
+            row-gap: 0;
+            margin-top: 0;
+        }
+        &-information{
+            align-items: center;
+            display: flex;
+            width: 1008px;
+            height: 64px;
+            margin: auto;
+            justify-content: flex-end;
+            &__repair,&__cost,&__time{
+                font-family: 'TT Lakes';
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.2px;
+                text-align: left;
+            }
+        }
+        &__card{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 64px;
+            border-bottom: 1px solid $borderColor;
+            margin: auto;
+        }
+        &__repair-services,&__repair-price,&__term{
+            font-family: 'TT Lakes';
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+        }
+        &__description{
+            width: 421px;
+            margin: 0;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-family: 'TT Lakes';
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+        }
+        &__offer{
+            margin: 0;
+            font-family: 'TT Lakes';
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+        }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .prices{
+        .swiper::before{
+            height: 200px;
+        }
+
+        &-information{
+            display: none;
+        }
+            .swiper-wrapper{
+                flex-direction: row;
+                height: 200px;
+                    .swiper-slide{
+                        width: 260px;
+                    }
+            }
+        &__card{
+            margin: auto;
+            justify-content: space-around;
+            width: 260px;
+            height: 168px;
+            flex-direction: column;
+            background-color: $backGroundWhite;
+            border: 1px solid $borderColor;
+            border-radius: 6px;
+            align-items: flex-start;
+            height: 100%;
+            .button--long{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                margin-bottom: 16px;
+                margin-right: 16px;
+            }
+        }
+        &__repair-services,&__repair-price,&__term{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            margin-left: 16px;
+        }
+        &__repair-services{
+            &::before{
+                content:'Ремонтные услуги';
+                font-family: 'TT Lakes';
+                font-size: 14px;
+                line-height: 16px;
+                color: $servisesTitleColor;
+                opacity: 0.72;
+            }
+        }
+        &__repair-price{
+            &::before{
+                content:'Цена';
+                font-family: 'TT Lakes';
+                font-size: 14px;
+                line-height: 16px;
+                color: $servisesTitleColor;
+                opacity: 0.72;
+            }
+        }
+        &__term{
+            &::before{
+                content:'Срок';
+                font-family: 'TT Lakes';
+                font-size: 14px;
+                line-height: 16px;
+                color: $servisesTitleColor;
+                opacity: 0.72;
+            }
+        }
+        &__description{
+           width: 288px;
+        }
+        &__offer{
+            width: 192px;
+            display: block;
+        }
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1439px){
+    .prices{
+        .swiper{
+            width: 720px;
+            &-wrapper{
+                background-color: $backGroundWhite;
+            }
+                .swiper-slide:first-of-type{
+                    .prices__term{
+                        margin-right: 51px;
+                    }
+                    .prices__repair-price{
+                        margin-right: 17px;
+                    }
+                }
+        }
+        &__card{
+            width: 688px;
+        }
+        &-information{
+            width: 688px;
+            &__repair{
+                margin-right: auto;
+            }
+            &__cost{
+                margin-right: 56px;
+            }
+            &__time{
+                margin-right: 185px;
+            }
+        }
+        &__repair-services{
+            margin-right: auto;
+        }
+        &__term{
+            margin-right: 20px;
+        }
+        &__repair-price{
+            margin-right: 44px;
+        }
+    }
+}
+
+@media screen and (min-width: 1439px){
+    .prices{
+        .swiper{
+            width: 1056px;
+            &-wrapper{
+                background-color: $backGroundWhite;
+            }
+                .swiper-slide:first-of-type{
+                    .prices__term{
+                        margin-right: 142px;
+                    }
+                    .prices__repair-price{
+                        margin-right: 148px;
+                    }
+                }
+        }
+        &__card{
+            width: 1008px;
+        }
+        &-information{
+            width: 1008px;
+            &__repair{
+                margin-right: auto;
+            }
+            &__cost{
+                margin-right: 186px;
+            }
+            &__time{
+                margin-right: 276px;
+            }
+        }
+        &__repair-services{
+            margin-right: auto;
+        }
+        &__term{
+            margin-right: 111px;
+        }
+        &__repair-price{
+            margin-right: 175px;
+        }
+
+    }
+}

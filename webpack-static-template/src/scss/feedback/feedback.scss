@@ -1,0 +1,62 @@
+.feedback-page{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom:0;
+    transition: 0.5s;
+    font-family: 'TT Lakes';
+    transition: 0.5s;
+    transform: translateX(100%);
+    z-index: 1000;
+    &_active{
+        transform: translateX(0%);
+        position: fixed;
+    }
+    .feedback-modal{
+        background: $backGroundWhite;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        width: 440px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        .button--close{
+            position: absolute;
+            left: -72px;
+            top: 32px;
+        }
+        &__title{
+            margin-top: 32px;
+            margin-bottom: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            &-text{
+                font-size: 28px;
+                font-weight: bold;
+                margin: 0;
+                margin-left: 30px;
+            }
+        }
+    } 
+}
+@media screen and (min-width: 0px) and (max-width: 767px){
+    .feedback-page{
+        .feedback-modal{
+            max-width: 440px;
+            width: 100%;
+            .button--close{
+                top: 24px;
+                left: 16px;
+            }
+            &__title{
+                margin-top: 104px;
+                &-text{
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+}

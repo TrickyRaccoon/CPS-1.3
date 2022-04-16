@@ -1,0 +1,23 @@
+.readmore-button{
+    border: none;
+    height: 24px;
+    margin-left: 32px;
+    margin-top: 24px;
+    background-color: $bgHeaderColor;
+    display: flex;
+    padding: 0;
+    width: 132px;
+
+        .expand-button{
+            &--active{
+                transform: rotate(180deg);
+            }
+        }
+    &__description{
+        font-family: 'TT Lakes';
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 600;
+        margin: 0;
+    }
+}

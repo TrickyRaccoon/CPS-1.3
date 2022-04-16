@@ -1,0 +1,223 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    font-family: "TT Lakes";
+    font-weight: normal;
+    &__title{
+        display: flex;
+        width: 288px;
+        margin-top: 24px;
+        margin-bottom: 0;
+        height: 40px;
+        font-weight: bold;
+    }
+    &__title-text{
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0;
+    }
+    &__menu-list{
+        padding: 0;
+        margin-top: 24px;
+        overflow: hidden;
+        overflow-x: scroll;
+        white-space:nowrap;
+            li:last-of-type::after{
+                content: " ";
+                width: 24px;
+                height:40px;
+                background-image: url("../img/button/fade.svg");
+                position: absolute;
+                z-index: 1;
+                right: 0;
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+            }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    &__menu-item{
+        color: $servisesTitleColor;
+        display: inline-block;
+        padding-left: 16px;
+        padding-bottom: 8px;
+        padding-right: 9px;
+        padding-top: 8px;
+        font-size: 16px;
+        line-height: 24px;
+        vertical-align: middle;
+            a{
+                text-decoration: none;
+            }
+        &:first-of-type{
+            background-color: $backGroundWhite;
+            border: 2px solid #B8FFEC;
+            border-radius: 6px;
+        }
+    }
+    &__info-text{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        overflow: hidden;
+        text-align: left;
+        overflow:hidden;
+        &--active{
+            max-height: none !important;
+        }
+    }
+    &__main-picture{
+        margin-bottom: 35px;
+    }
+    &__header{
+        display: none;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width:767px){
+    .services{
+        &__title-text{
+            margin-left: 12px;
+        }
+        &__menu-list{
+            margin-left: 16px;
+        }
+        &__info{
+            margin-top: 24px;
+        }
+        &__info-text{
+            margin-left: 16px;
+            margin-bottom: 16px;
+            max-height: 90px;
+            max-width:288px;
+        }
+        &__readmore-button{
+            margin-left: 16px;
+            margin-bottom: 16px;
+        }
+        &__main-picture{
+            width: 320px;
+            height: 176px;
+            margin: auto;
+        }
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1439px){   
+    .services{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__title-text{
+            margin-left: 20px;
+        }
+        &__menu-list{
+            margin-left: 24px;
+        }
+        &__main-picture{
+            width: 360px;
+            height: 208px;
+            border-radius: 6px;
+            margin-right: 24px;
+            margin-top: 32px;
+    
+        }
+        &__info-text{
+            margin-bottom: 10px;
+            max-height: 100px;
+            max-width: 312px;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            margin-left: 24px;
+        }
+        &__readmore-button{
+            margin-left: 24px;
+        }
+        &__info{
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__description{
+            margin-left: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+@media screen and (min-width: 1439px){  
+    .services{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &__title-text{
+            margin-left: 30px;
+        }
+        &__header{
+            min-height: 88px;
+            display: flex;
+            align-items: center;
+            justify-self: flex-end;
+        }
+        &__main-picture{
+            width: 531px;
+            height: 307px;
+            border-radius: 6px;
+            margin-right: 24px;
+            margin-top: 19px;
+        }
+        &__info{
+            margin-left: 34px;
+            max-width: 490px;
+            margin-top:19px
+        }
+        &__info-text{
+            margin-left: 0;
+            max-width: 490px;
+            max-height: 60px;
+        }
+        &__readmore-button{
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+        &__menu-list{
+            max-width: 1100px;
+            white-space: normal;
+            margin-left: 34px;
+                li:last-of-type::after{
+                    display: none;
+                }
+        } 
+        &__header{
+            width: 378px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-weight: 600;
+            margin-right: 32px;
+        }
+        &__link{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 173px;
+        }
+        &__title{
+            margin-top: 42px;
+        }
+        &__menu-item{
+            padding-left: 22px;
+            padding-right: 21px;
+            &:last-of-type{
+                padding-left:42px;
+            }
+        }
+    }
+}
