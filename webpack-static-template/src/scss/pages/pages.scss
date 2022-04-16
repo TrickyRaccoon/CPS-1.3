@@ -1,6 +1,7 @@
 body{
     margin: 0;
     background-color: $bgHeaderColor;
+    position: relative;
     overflow-x: hidden;
     a{
       &:hover{
