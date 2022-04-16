@@ -1309,7 +1309,7 @@ body {
   max-width: 1440px;
   width: 100%;
   margin: auto;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 .main {
   max-width: 1120px;
