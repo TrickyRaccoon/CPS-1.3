@@ -1296,6 +1296,7 @@
 body {
   margin: 0;
   background-color: #F8F8F8;
+  position: relative;
   overflow-x: hidden; }
   body a:hover {
     opacity: 0.5;
