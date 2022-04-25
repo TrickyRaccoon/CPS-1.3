@@ -1,34 +1,50 @@
 .button{
-    background-color:$buttonColor !important;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: none;
+    transition: 0.3s;
+    &:hover{
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    &:active{
+        transform: rotate(30deg);
+    }
     &--menu{
+        background-color:$buttonColor !important;
         background: url('../img/button/menu-button.svg') no-repeat center;
     }
     &--repair{
+        background-color:$buttonColor !important;
         background: url('../img/button/repair-button.svg') no-repeat center;
     }
     &--search{
+        background-color:$buttonColor !important;
         background: url('../img/button/search-button.svg') no-repeat center;
     }
     &--call{
+        background-color:$buttonColor !important;
         background: url('../img/button/phone.svg') no-repeat center;
     }
     &--chat{
+        background-color:$buttonColor !important;
         background: url('../img/button/chat.svg') no-repeat center;
     }
     &--profile{
+        background-color:$buttonColor !important;
         background: url('../img/button/man.svg') no-repeat center;
     }
     &--close{
+        background-color:$buttonColor !important;
          background: url("../img/button/close-button.svg") no-repeat center;
     }
     &--more{
-        background: url("../img/button/dropdown-white.svg") no-repeat center;
+        border: 2px solid $buttonColor;
+        background: url("../img/button/dropdown.svg") no-repeat center;
     }
     &--long{
+        background-color:$buttonColor !important;
         padding-right: 16px;
         align-items: center;
         border-radius: 16px;
@@ -38,25 +54,17 @@
         background: url('../img/button/dropdown-white.svg') no-repeat;
         background-position: 95px 11px;
         background-color: $buttonColor;
-        &__text{
-            font-family: 'TT Lakes';
-            font-size: 12px;
-            line-height: 24px;
-            text-align: left;
-            letter-spacing: -0.15px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            margin: 0;
-            margin-left: 12px;
-        }
     }
-    &--offer{
-        margin-left: 9px;
-        width: 6px;
-        height: 10px;
-        background: url('../img/button/offer__line.svg') no-repeat center;
-        border: none;
-        padding: 0;
+    &__text{
+        font-family: 'TT Lakes';
+        font-size: 12px;
+        line-height: 24px;
+        text-align: left;
+        letter-spacing: -0.15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin: 0;
+        margin-left: 12px;
     }
 }
 

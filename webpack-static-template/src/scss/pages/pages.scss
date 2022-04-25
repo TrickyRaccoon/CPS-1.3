@@ -8,23 +8,21 @@ body{
           opacity: 0.5;
           cursor: pointer;
       }
-    }
-    button{
-      &:hover{
-        opacity: 0.5;
-        cursor: pointer;
+      &:active{
+        transform: translateY(1%);
       }
     }
+  }
+  title{
+    display: block;
   }
   .wrapper{
     display: block;
     max-width: 1440px;
     width: 100%;
     margin: auto;
-    overflow-x: hidden;
   }
   .main{
-    max-width: 1120px;
     margin: auto;
     transition: 0.5s;
     &_disabled{

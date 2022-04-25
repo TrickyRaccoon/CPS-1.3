@@ -10,6 +10,12 @@
         margin-bottom: 0;
         height: 40px;
         font-weight: bold;
+        &::before{
+            content: '';
+            width: 3px;
+            height: 40px;
+            background: url('../img/page/page__title-decor.svg');
+        }
     }
     &__title-text{
         font-size: 28px;
@@ -22,6 +28,8 @@
         overflow: hidden;
         overflow-x: scroll;
         white-space:nowrap;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
             li:last-of-type::after{
                 content: " ";
                 width: 24px;
@@ -144,11 +152,16 @@
             margin-top: 32px;
             display: flex;
             flex-direction: column;
+            margin-left: auto;
         }
         &__description{
             margin-left: 24px;
             display: flex;
             flex-direction: column;
+        }
+        &__main-picture{
+            margin-right: auto;
+            margin-left: 40px;
         }
     }
 }

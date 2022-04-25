@@ -45,15 +45,20 @@
 
 @media screen and (min-width: 767px) and (max-width: 1439px){
     .swiper .swiper-wrapper{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 24px;
+        display: flex;
         row-gap: 16px;
-        width: 720px;
+        column-gap: 24px;
         margin: auto;
         margin-top: 24px;
         max-height: 165px;
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+        .swiper-slide{
+            width: auto;
+        }
     }
+    
 }
 
 @media screen and (min-width: 1439px){

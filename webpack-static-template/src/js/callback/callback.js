@@ -6,19 +6,16 @@ let closeButton = document.querySelector('.callback-page .button--close');
 let main = document.querySelector('.main');
 
 callbackButton.onclick = function() {
-    callback.classList.add('callback-modal_active');
     main.classList.add('main_disabled');
     callbackContainer.classList.add('callback-page_active');
 };
 
 callbackButtonAside.onclick = function() {
-    callback.classList.add('callback-modal_active');
     main.classList.add('main_disabled');
     callbackContainer.classList.add('callback-page_active');
 };
 
 closeButton.onclick = function() {
-    callback.classList.remove('callback-modal_active');
     main.classList.remove('main_disabled');
     callbackContainer.classList.remove('callback-page_active');
 };
@@ -26,7 +23,6 @@ closeButton.onclick = function() {
 callbackContainer.addEventListener('click', (e) =>{
     const click = e.composedPath().includes(callback);
     if( !click){
-        callback.classList.remove('callback-modal_active');
         main.classList.remove('main_disabled');
         callbackContainer.classList.remove('callback-page_active');
     };

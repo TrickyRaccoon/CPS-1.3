@@ -7,17 +7,22 @@
     display: flex;
     padding: 0;
     width: 132px;
-
-        .expand-button{
-            &--active{
-                transform: rotate(180deg);
-            }
-        }
     &__description{
         font-family: 'TT Lakes';
         font-size: 16px;
         line-height: 24px;
         font-weight: 600;
         margin: 0;
+        display: flex;
+        &::before{
+            content: '';
+            background: url('../img/button/expand.svg') no-repeat center;
+            display: block;
+            width: 24px;
+            height: 24px;
+            &--active{
+                transform: rotate(180deg);
+            }
+        }
     }
 }

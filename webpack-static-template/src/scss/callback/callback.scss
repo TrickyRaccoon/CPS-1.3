@@ -1,15 +1,18 @@
 .callback-page{
+    display: none;
     position: absolute;
     right: 0;
     left: 0;
     top: 0;
     bottom:0;
-    transition: 0.5s;
     transform: translateX(100%);
     z-index: 1000;
     &_active{
-        transform: translateX(0%);
+        display: block;
         position: fixed;
+        animation-name: flip;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
     }
     .callback-modal{
         display: flex;
@@ -55,6 +58,13 @@
             margin-bottom: 24px;
             height: 40px;
             font-weight: bold;
+            &::before{
+                content: '';
+                display: block;
+                width: 3px;
+                height: 40px;
+                background: url('../img/page/page__title-decor.svg');
+            }
         }
         &__title-text{
             font-family: 'TT Lakes';
@@ -111,3 +121,7 @@
             }
     }
 }
+
+@keyframes flip {
+    100%{transform: translateX(0%);}
+  }

@@ -3,17 +3,38 @@
     width: 100%;
     min-height: 88px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $borderColor;
-    &__button-container_left, &__button-container_right{
+    &__header-left, &__header-right{
         display: flex;
-        justify-content: space-between;
         align-items: center;
     }
     &__divider{
         width: 2px;
         height: 32px;
         background-color: $borderColor;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            width: 2px;
+            height: 32px;
+            background-color: $borderColor;
+            display: block;
+            position: relative;
+            right: 20px;
+        }
+    }
+    .button--repair::before{
+        content: '';
+        width: 2px;
+        height: 32px;
+        background-color: $borderColor;
+        position: relative;
+        display: block;
     }
 }
 
@@ -37,15 +58,26 @@
 
 @media screen and (min-width: 0px) and (max-width:767px) {
     .header{
-        justify-content: space-evenly;
-        &__button-container_left{
-            width: 152px;
+        &__header-left{
+            width: 179px;
+            justify-content: space-between;
+            margin-left: 16px;
         }
-        &__button-container_right{
-            width: 114px;
+        &__header-right{
+            width: 96px;
+            justify-content: space-between;
+            margin-right: 16px;
+            .button--repair{
+                &::before{
+                    right: 20px;
+                }
+            }
         }
-        &__divider:first-of-type{
-            display: none;
+        &__logo{
+            margin-right: 20px;
+            &::before{
+                display: none;
+            }
         }
     }
 }
@@ -53,16 +85,22 @@
 @media screen and (min-width: 767px) and (max-width: 1439px) {
     .header{
         justify-content: space-between;
-        &__button-container_left{
+        &__header-left{
             width: 179px;
             margin-left: 24px;
+            justify-content: space-between;
         }
-        &__button-container_right{
-            width: 282px;
+        &__header-right{
+            justify-content: space-between;
+            width: 296px;
             margin-right: 24px;
-        }
-        &__divider:first-of-type{
-            display: block;
+            .button--repair{
+                margin-left: auto;
+                margin-right: 16px;
+                &::before{
+                    right: 30px;
+                }
+            }
         }
     }
 }
