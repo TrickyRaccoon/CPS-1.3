@@ -147,7 +147,7 @@
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
   .header__header-left {
-    width: 179px;
+    width: 154px;
     justify-content: space-between;
     margin-left: 16px; }
   .header__header-right {
@@ -155,11 +155,9 @@
     justify-content: space-between;
     margin-right: 16px; }
     .header__header-right .button--repair::before {
-      right: 20px; }
-  .header__logo {
-    margin-right: 20px; }
-    .header__logo::before {
-      display: none; } }
+      right: 30px; }
+  .header .logo::before {
+    display: none; } }
 
 /*768*/
 @media screen and (min-width: 767px) and (max-width: 1439px) {
@@ -923,7 +921,11 @@
     width: 288px; }
   .prices__offer {
     width: 192px;
-    display: block; } }
+    display: block; }
+    .prices__offer::after {
+      position: absolute;
+      bottom: 5px;
+      left: 105px; } }
 
 @media screen and (min-width: 767px) and (max-width: 1439px) {
   .prices .swiper {
