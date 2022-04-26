@@ -59,7 +59,7 @@
 @media screen and (min-width: 0px) and (max-width:767px) {
     .header{
         &__header-left{
-            width: 179px;
+            width: 154px;
             justify-content: space-between;
             margin-left: 16px;
         }
@@ -69,12 +69,11 @@
             margin-right: 16px;
             .button--repair{
                 &::before{
-                    right: 20px;
+                    right: 30px;
                 }
             }
         }
-        &__logo{
-            margin-right: 20px;
+        .logo{
             &::before{
                 display: none;
             }

@@ -144,6 +144,11 @@
         &__offer{
             width: 192px;
             display: block;
+            &::after{
+                position: absolute;
+                bottom: 5px;
+                left: 105px;
+            }
         }
     }
 }
