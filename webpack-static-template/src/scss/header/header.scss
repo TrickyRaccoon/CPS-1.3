@@ -26,6 +26,7 @@
             display: block;
             position: relative;
             right: 20px;
+            pointer-events: none;
         }
     }
     .button--repair::before{
@@ -70,6 +71,7 @@
             .button--repair{
                 &::before{
                     right: 30px;
+                    pointer-events: none;
                 }
             }
         }
@@ -98,6 +100,7 @@
                 margin-right: 16px;
                 &::before{
                     right: 30px;
+                    pointer-events: none;
                 }
             }
         }

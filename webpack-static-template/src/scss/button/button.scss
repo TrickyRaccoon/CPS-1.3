@@ -52,14 +52,12 @@
         width: 119px;
         height: 32px;
         background: url('../img/button/dropdown-white.svg') no-repeat;
-        background-position: 95px 11px;
+        background-position: 95px 10.8px;
         background-color: $buttonColor;
-    }
-    &__text{
         font-family: 'TT Lakes';
         font-size: 12px;
         line-height: 24px;
-        text-align: left;
+        text-align: center;
         letter-spacing: -0.15px;
         text-transform: uppercase;
         color: #FFFFFF;

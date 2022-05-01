@@ -1,15 +1,12 @@
-var servicesText = document.querySelector('.services__info-text');
-var readmoreButton = document.querySelector('.services__readmore-button');
-var readmoreButtonDescription = document.querySelector('.services__readmore-button .readmore-button__description');
-var expandButton = document.querySelector('.services__readmore-button .readmore-button__description::before');
+const readMoreButton = document.querySelector('.services__readmore-button');
+const servicesText = document.querySelector('.services__info-text');
 
-readmoreButton.onclick = function() {
+readMoreButton.onclick = function() {
     servicesText.classList.toggle('services__info-text--active');
-    expandButton.classList.toggle('readmore-button__description::before--active')
-    readmoreButton.classList.toggle('readmore-button--active')
-    if(readmoreButtonDescription.textContent === 'Показать все'){
-        readmoreButtonDescription.textContent = 'Скрыть'
+    readMoreButton.classList.toggle('readmore-button--rotate');
+    if(readMoreButton.textContent === 'Показать все'){
+        readMoreButton.textContent = 'Скрыть'
     } else {
-        readmoreButtonDescription.textContent = 'Показать все'
+        readMoreButton.textContent = 'Показать все'
     }
 };

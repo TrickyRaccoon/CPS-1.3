@@ -1,15 +1,12 @@
-var repairMechanizm = document.querySelector('.mechanizm-repair .swiper .swiper-wrapper');
-var mechanizmReadMoreButton = document.querySelector('.mechanizm-repair__readmore-button');
-var mechanizmReadMoreButtonDescription = document.querySelector('.mechanizm-repair__readmore-button .readmore-button__description');
-var mechanizmRepairExpandButton = document.querySelector('.mechanizm-repair__readmore-button .readmore-button__description::before');
+const repairMechanizm = document.querySelector('.mechanizm-repair .swiper .swiper-wrapper');
+const mechanizmReadMoreButton = document.querySelector('.mechanizm-repair__readmore-button');
 
 mechanizmReadMoreButton.onclick = function() {
     repairMechanizm.classList.toggle('swiper-wrapper--active');
-    mechanizmRepairExpandButton.classList.toggle('readmore-button__description::before--active')
-    mechanizmReadMoreButton.classList.toggle('readmore-button--active')
-    if(mechanizmReadMoreButtonDescription.textContent === 'Показать все'){
-        mechanizmReadMoreButtonDescription.textContent = 'Скрыть'
+    mechanizmReadMoreButton.classList.toggle('readmore-button--rotate')
+    if(mechanizmReadMoreButton.textContent === 'Показать все'){
+        mechanizmReadMoreButton.textContent = 'Скрыть'
     } else {
-        mechanizmReadMoreButtonDescription.textContent = 'Показать все'
+        mechanizmReadMoreButton.textContent = 'Показать все'
     }
 };
